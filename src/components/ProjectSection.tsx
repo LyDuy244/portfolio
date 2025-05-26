@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import {ArrowRight, ExternalLink, GithubIcon} from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -47,13 +48,14 @@ const ProjectSection = () => {
             projects.map(project => (
               <div key={project.id} className={"group bg-card rounded-lg overflow-hidden shadow-xs card-hover"}>
                 <div className={"h-48 overflow-hidden"}>
-                  <img src={project.image} alt={project.title}
+                  <Image src={project.image} alt={project.title}
                        className={"w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"}/>
                 </div>
                 <div className={"p-6 flex flex-wrap gap-2 mb-4"}>
                   {
-                    project.tags.map(tag => (
+                    project.tags.map((tag, index) => (
                       <span
+                        key={index}
                         className={"px-2 py-1 text-xs font-medium border bg-primary/20 rounded-full bg-secondary-foreground"}>{tag}</span>
                     ))
                   }
