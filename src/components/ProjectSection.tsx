@@ -35,7 +35,7 @@ const projects = [
 
 const ProjectSection = () => {
   return (
-    <section id={"project"} className={"py-24 px-4 relative"}>
+    <section id={"projects"} className={"py-24 px-4 relative"}>
       <div className={"container mx-auto max-w-5xl"}>
         <h2 className={"text-3xl md:text-4xl font-bold mb-4 text-center"}>Featured <span
           className={"text-primary"}>Projects</span></h2>
@@ -49,6 +49,8 @@ const ProjectSection = () => {
               <div key={project.id} className={"group bg-card rounded-lg overflow-hidden shadow-xs card-hover"}>
                 <div className={"h-48 overflow-hidden"}>
                   <Image src={project.image} alt={project.title}
+                         width={600}
+                         height={600}
                        className={"w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"}/>
                 </div>
                 <div className={"p-6 flex flex-wrap gap-2 mb-4"}>

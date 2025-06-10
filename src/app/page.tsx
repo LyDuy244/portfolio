@@ -11,20 +11,15 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className={"min-h-screen"}>
-      {/*  Theme Toggle  */}
       <ModeToggle/>
-      {/*    Background effect*/}
       <StarBackground/>
-      {/*    Nav bar*/}
       <Navbar/>
-      {/*    Main content*/}
       <main>
         <HeroSection/>
         <AboutSection/>
         <ProjectSection/>
         <ContactSection/>
       </main>
-      {/*    Footer*/}
       <Footer/>
     </div>
   );
